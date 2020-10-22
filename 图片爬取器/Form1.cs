@@ -19,8 +19,11 @@ namespace 图片爬取器
         }
         public string GetNewURL(string str,int num)
         {
-            
-            return str;
+            string newstr = "";
+            string str_1 = str.Substring(0, num);
+            string str_2 = str.Substring(num);
+            newstr = str_1 + "||****||" + str_2;
+            return newstr;
         }
     }
 }
